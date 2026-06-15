@@ -33,7 +33,7 @@ with st.sidebar:
                 # API Key configure karna
                 genai.configure(api_key=api_key_input)
                 # Test the API key with a dummy call
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                model = genai.GenerativeModel('gemini-pro')
                 st.session_state.logged_in = True
                 st.session_state.user_email = email_input
                 st.success("Login Successful! 🎉")
@@ -52,7 +52,8 @@ if st.session_state.logged_in:
     st.markdown(f"Welcome back, **{st.session_state.user_email}**! What do you want to learn today?")
     
     # Initialize the Gemini model
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-pro')
+
     
     # Tabs for different student needs
     tab1, tab2, tab3 = st.tabs(["🧠 Explain Concept", "📝 Summarize Notes", "❓ Generate Quiz"])
