@@ -27,7 +27,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title
-st.title("📘 AI Study Buddy Pro")
+st.title("📘 AI Study Buddy")
 st.write("Generate Notes, Summaries, Explanations and Quiz Questions using Gemini AI")
 
 # Sidebar
@@ -58,15 +58,17 @@ if st.button("Generate Study Material"):
             prompt = f"Summarize the following text: {user_input}"
 
         try:
-            with st.spinner("Generating..."):
-                response = model.generate_content(prompt)
+           with st.spinner("Generating..."):
+               response = model.generate_content(prompt)
 
-            st.success("Generated Successfully ✅")
-            st.write(response.text)
-
-            # Copy to Clipboard
-            st.code(response.text, language="text")
-
+           if response and response.text:
+               st.success("Generated Successfully ✅")
+               st.write(response.text)
+       else:
+            st.error("No response received. Check API key or quota.")
+except Exception as e:
+    st.error(f"Error: {e}")
+          
             # Download Option
             if download_option:
                 st.download_button(
