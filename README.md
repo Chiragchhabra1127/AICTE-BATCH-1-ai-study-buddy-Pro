@@ -70,7 +70,7 @@ Get a free API key at: https://aistudio.google.com/apikey
 streamlit run app.py
 
 Open your browser and visit:
-http://localhost:8501
+https://aicte-batch-1-ai-study-buddy-pro-4iehn5qma52xztmwnbqjdq.streamlit.app/
 
 ---
 
