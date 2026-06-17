@@ -49,32 +49,6 @@ AI-Study-Buddy-Pro/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-└── .env   (optional, for local use)
-
----
-
-⚙️ Installation
-
-1. Clone Repository
-
-git clone https://github.com/your-username/AI-Study-Buddy-Pro.git
-cd AI-Study-Buddy-Pro
-
-2. Create Virtual Environment
-
-python -m venv venv
-
-3. Activate Virtual Environment
-
-Windows:
-venv\Scripts\activate
-
-Linux / Mac:
-source venv/bin/activate
-
-4. Install Dependencies
-
-pip install -r requirements.txt
 
 ---
 
@@ -153,6 +127,7 @@ The free tier of the Gemini API has daily and per-minute request limits. If you 
 👨‍💻 Author
 
 Chirag Chhabra
+
 Built and iteratively upgraded as part of an AI internship project — AI Study Buddy Pro.
 
 ---
